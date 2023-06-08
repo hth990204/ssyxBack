@@ -23,7 +23,7 @@ public class RoleController {
     private RoleService roleService;
 
     @GetMapping("{current}/{limit}")
-    @ApiOperation("查询用户测试")
+    @ApiOperation("查询角色测试")
     public Result pageList(@PathVariable Long current,
                            @PathVariable Long limit,
                            RoleQueryVo roleQueryVo) {
