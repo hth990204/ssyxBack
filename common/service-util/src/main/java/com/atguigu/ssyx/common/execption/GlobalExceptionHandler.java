@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
         return Result.fail(null);
     }
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(SsyxException.class)
     @ResponseBody
     public Result error(SsyxException exception) {
         return Result.fail(null);
