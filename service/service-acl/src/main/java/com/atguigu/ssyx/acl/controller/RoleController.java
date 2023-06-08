@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Api(tags = "角色接口")
 @RestController
@@ -27,11 +28,51 @@ public class RoleController {
                            @PathVariable Long limit,
                            RoleQueryVo roleQueryVo) {
 
-        Page<Role> pageParam = new Page<>();
+        Page<Role> pageParam = new Page<>(current, limit);
 
         IPage<Role> pageModel = roleService.selectRolePage(pageParam, roleQueryVo);
 
         return Result.ok(pageModel);
+    }
+
+    @ApiOperation("根据id查询角色")
+    @GetMapping("/get/{id}")
+    public Result get(@PathVariable Long id) {
+        Role role = roleService.getById(id);
+        return Result.ok(role);
+    }
+
+    @ApiOperation("添加角色")
+    @PostMapping("/save")
+    public Result save(@RequestBody Role role) {
+        boolean is_success = roleService.save(role);
+        if (is_success) {
+            return Result.ok(null);
+        }
+        else {
+            return Result.fail(null);
+        }
+    }
+
+    @ApiOperation("修改角色")
+    @PutMapping("/update")
+    public Result update(@RequestBody Role role) {
+        roleService.updateById(role);
+        return Result.ok(null);
+    }
+
+    @ApiOperation("删除角色")
+    @DeleteMapping("remove/{id}")
+    public Result remove(@PathVariable Long id) {
+        roleService.removeById(id);
+        return Result.ok(null);
+    }
+
+    @ApiOperation("批量删除")
+    @DeleteMapping("/batchRemove")
+    public Result batchRemove(@RequestBody List<Long> idList) {
+        roleService.removeByIds(idList);
+        return Result.ok(null);
     }
 
 }
