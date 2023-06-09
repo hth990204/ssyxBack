@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Api(tags = "菜单管理")
 @RestController
@@ -19,15 +20,6 @@ public class PermissionController {
     @Resource
     private PermissionService permissionService;
 
-
-    /*
-      getPermissionList() {
-    return request({
-      url: `${api_name}`,
-      method: 'get'
-    })
-  },
-     */
 
 
     @ApiOperation("查询所有菜单")
@@ -45,15 +37,7 @@ public class PermissionController {
         return Result.ok(null);
     }
 
-    /*
-      updatePermission(permission) {
-    return request({
-      url: `${api_name}/update`,
-      method: "put",
-      data: permission
-    })
-  },
-     */
+
     @ApiOperation("修改菜单")
     @PutMapping("/update")
     public Result updatePermission(@RequestBody Permission permission) {
@@ -61,16 +45,7 @@ public class PermissionController {
         return Result.ok(null);
     }
 
-      /*
-  删除一个权限项
 
-    removePermission(id) {
-        return request({
-                url: `${api_name}/remove/${id}`,
-        method: "delete"
-    })
-    },
-            */
     @ApiOperation("删除菜单")
     @DeleteMapping("/remove/{id}")
     public Result removePermission(@PathVariable Long id) {
@@ -78,4 +53,18 @@ public class PermissionController {
         return Result.ok(null);
     }
 
+    @ApiOperation("查看角色权限列表")
+    @GetMapping("/toAssign/{id}")
+    public Result toAssign(@PathVariable Long id) {
+        List<Permission> res = permissionService.getPermissionByRoleId(id);
+        return Result.ok(res);
+    }
+
+    @ApiOperation("授予角色权限")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestParam Long roleId,
+                           @RequestParam Long[] permissionId) {
+        permissionService.saveRolePermission(roleId, permissionId);
+        return Result.ok(null);
+    }
 }

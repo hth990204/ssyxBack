@@ -1,5 +1,6 @@
 package com.atguigu.ssyx.acl.controller;
 
+import com.atguigu.ssyx.acl.service.PermissionService;
 import com.atguigu.ssyx.acl.service.RoleService;
 import com.atguigu.ssyx.common.result.Result;
 import com.atguigu.ssyx.model.acl.Role;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Api(tags = "角色接口")
 @RestController
@@ -21,6 +23,9 @@ public class RoleController {
 
     @Resource
     private RoleService roleService;
+
+    @Resource
+    private PermissionService permissionService;
 
     @GetMapping("{current}/{limit}")
     @ApiOperation("查询角色测试")
@@ -74,5 +79,7 @@ public class RoleController {
         roleService.removeByIds(idList);
         return Result.ok(null);
     }
+
+
 
 }

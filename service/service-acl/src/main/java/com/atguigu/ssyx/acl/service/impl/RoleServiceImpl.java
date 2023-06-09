@@ -41,9 +41,12 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
 
     @Override
     public Map<String, Object> getRolesByAdminId(Long id) {
+        // 所有角色
         List<Role> allRolesList = baseMapper.selectList(null);
 
         LambdaQueryWrapper<AdminRole> wrapper = new LambdaQueryWrapper<>();
+
+        // 用户Id
         wrapper.eq(AdminRole::getAdminId, id);
         List<AdminRole> adminRoleList = adminRoleService.list(wrapper);
 
