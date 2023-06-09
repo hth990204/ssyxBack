@@ -8,4 +8,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 public interface AdminService extends IService<Admin> {
     IPage<Admin> selectAdminPage(Page<Admin> pageParam, AdminQueryVo adminQueryVo);
+
 }

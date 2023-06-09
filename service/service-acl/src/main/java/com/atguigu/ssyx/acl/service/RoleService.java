@@ -12,4 +12,6 @@ public interface RoleService extends IService<Role> {
     IPage<Role> selectRolePage(Page<Role> pageParam, RoleQueryVo roleQueryVo);
 
     Map<String, Object> getRolesByAdminId(Long id);
+
+    void saveAdminRole(Long adminId, Long[] roleIds);
 }

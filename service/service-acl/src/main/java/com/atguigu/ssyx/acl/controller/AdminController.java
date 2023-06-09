@@ -96,4 +96,13 @@ public class AdminController {
         Map<String, Object> map = roleService.getRolesByAdminId(id);
         return Result.ok(map);
     }
+
+    @ApiOperation("为用户分配角色")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestParam Long adminId,
+                           @RequestParam Long[] roleId) {
+        roleService.saveAdminRole(adminId, roleId);
+        return Result.ok(null);
+
+    }
 }

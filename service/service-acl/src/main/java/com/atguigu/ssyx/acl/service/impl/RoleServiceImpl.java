@@ -65,4 +65,21 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
         result.put("allRolesList", allRolesList);
         return result;
     }
+
+    @Override
+    public void saveAdminRole(Long adminId, Long[] roleIds) {
+        LambdaQueryWrapper<AdminRole> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(AdminRole::getAdminId, adminId);
+        adminRoleService.remove(wrapper);
+
+        List<AdminRole> list = new ArrayList<>();
+
+        for (Long roleId : roleIds) {
+            AdminRole adminRole = new AdminRole();
+            adminRole.setAdminId(adminId);
+            adminRole.setRoleId(roleId);
+            list.add(adminRole);
+        }
+        adminRoleService.saveBatch(list);
+    }
 }
