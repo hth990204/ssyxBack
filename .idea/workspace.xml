@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f30746c7-b2ab-49cd-88d4-9ff55eb55176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/mapper/RolePermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/RolePermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/impl/RolePermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/service-util/src/test/java/com/atguigu/ssyx/CodeGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/ServiceSysApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-sys/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-sys/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/controller/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/PermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/atguigu/ssyx/acl/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/common-util/src/main/java/com/atguigu/ssyx/common/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/service-util/src/test/java/com/atguigu/ssyx" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42643678" />
@@ -78,8 +76,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\workspace\guigu-ssyx-parent\common\service-util\src\test\java\com\atguigu\ssyx" />
+      <recent name="F:\workspace\guigu-ssyx-parent\model\src\test\java\com\atguigu\ssyx" />
       <recent name="F:\workspace\guigu-ssyx-parent\common\common-util\src\main\java\com\atguigu\ssyx\common\utils" />
       <recent name="F:\workspace\guigu-ssyx-parent\model\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.ssyx.sys" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -89,7 +92,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ServiceSysApplication">
+    <configuration name="CodeGet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.ssyx.CodeGet" />
+      <module name="service-util" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.ssyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="common-util" />
       <method v="2">
@@ -116,9 +132,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceSysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-sys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.ssyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ssyx.ServiceSysApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServiceSysApplication" />
         <item itemvalue="Spring Boot.ServiceAclApplication" />
+        <item itemvalue="Application.CodeGet" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +173,8 @@
       <workItem from="1686273848881" duration="7411000" />
       <workItem from="1686287919371" duration="528000" />
       <workItem from="1686289888409" duration="8712000" />
-      <workItem from="1686302518803" duration="4854000" />
+      <workItem from="1686302518803" duration="5533000" />
+      <workItem from="1686311078251" duration="3922000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -186,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686294622595</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="查询角色权限，前端没有完成功能，凑活看看">
+      <created>1686310461630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686310461630</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +249,7 @@
     <MESSAGE value="获取用户的角色" />
     <MESSAGE value="为用户分配角色" />
     <MESSAGE value="查询菜单和删除菜单" />
-    <option name="LAST_COMMIT_MESSAGE" value="查询菜单和删除菜单" />
+    <MESSAGE value="查询角色权限，前端没有完成功能，凑活看看" />
+    <option name="LAST_COMMIT_MESSAGE" value="查询角色权限，前端没有完成功能，凑活看看" />
   </component>
 </project>
