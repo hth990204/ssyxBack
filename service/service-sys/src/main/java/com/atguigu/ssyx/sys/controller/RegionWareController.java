@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -49,6 +50,26 @@ public class RegionWareController {
     public Result addRegionWare(@RequestBody RegionWare regionWare) {
 
         regionWareService.addRegionWare(regionWare);
+        return Result.ok(null);
+    }
+
+    @ApiOperation("删除开通区域")
+    @DeleteMapping("remove/{id}")
+    public Result remove(@PathVariable Long id) {
+        regionWareService.removeById(id);
+        return Result.ok(null);
+    }
+
+    //  updateStatus(id, status) {
+    //    return request({
+    //      url: `${api_name}/updateStatus/${id}/${status}`,
+    //      method: 'post'
+    //    })
+    @ApiOperation("取消开通区域")
+    @PostMapping("updateStatus/{id}/{status}")
+    public Result updateStatus(@PathVariable Long id,
+                               @PathVariable Integer status) {
+        regionWareService.updateStatus(id, status);
         return Result.ok(null);
     }
 
