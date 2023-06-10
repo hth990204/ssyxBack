@@ -31,13 +31,6 @@ public class RegionWareController {
     @Resource
     private RegionWareService regionWareService;
 
-//    getPageList(page, limit,searchObj) {
-//        return request({
-//                url: `${api_name}/${page}/${limit}`,
-//        method: 'get',
-//                params: searchObj
-//    })
-//    },
 
     @ApiOperation("开通区域列表")
     @GetMapping("{page}/{limit}")
@@ -49,6 +42,14 @@ public class RegionWareController {
 
         IPage<RegionWare> pageModel = regionWareService.selectPageRegionWare(pageParam, regionWareQueryVo);
         return Result.ok(pageModel);
+    }
+
+    @ApiOperation("添加开通区域")
+    @PostMapping("/save")
+    public Result addRegionWare(@RequestBody RegionWare regionWare) {
+
+        regionWareService.addRegionWare(regionWare);
+        return Result.ok(null);
     }
 
 }

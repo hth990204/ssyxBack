@@ -17,4 +17,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface RegionWareService extends IService<RegionWare> {
 
     IPage<RegionWare> selectPageRegionWare(Page<RegionWare> pageParam, RegionWareQueryVo regionWareQueryVo);
+
+    void addRegionWare(RegionWare regionWare);
 }

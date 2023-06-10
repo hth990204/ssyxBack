@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f30746c7-b2ab-49cd-88d4-9ff55eb55176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/test/java/com/atguigu/ssyx/CodeGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/ServiceSysApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-sys/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-sys/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/service-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/execption/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/execption/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/ssyx/common/execption/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/ssyx/common/execption/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/ssyx/common/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/ssyx/common/result/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/RegionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/RegionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/RegionWareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/RegionWareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/WareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/WareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/RegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/RegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/RegionWareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/RegionWareService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/impl/RegionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/impl/RegionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/impl/RegionWareServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/service/impl/RegionWareServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/RegionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/RegionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/RegionWareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/RegionWareController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/WareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/WareController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/RegionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/RegionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/RegionWareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/RegionWareService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/impl/RegionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/impl/RegionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/impl/RegionWareServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/impl/RegionWareServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +187,8 @@
       <workItem from="1686287919371" duration="528000" />
       <workItem from="1686289888409" duration="8712000" />
       <workItem from="1686302518803" duration="5533000" />
-      <workItem from="1686311078251" duration="3922000" />
+      <workItem from="1686311078251" duration="4209000" />
+      <workItem from="1686357325796" duration="3345000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -225,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686310461630</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="开通区域列表">
+      <created>1686324889952</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686324889952</updated>
+    </task>
+    <task id="LOCAL-00009" summary="开通区域列表，上次忘了add了">
+      <created>1686324956247</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686324956247</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +278,8 @@
     <MESSAGE value="为用户分配角色" />
     <MESSAGE value="查询菜单和删除菜单" />
     <MESSAGE value="查询角色权限，前端没有完成功能，凑活看看" />
-    <option name="LAST_COMMIT_MESSAGE" value="查询角色权限，前端没有完成功能，凑活看看" />
+    <MESSAGE value="开通区域列表" />
+    <MESSAGE value="开通区域列表，上次忘了add了" />
+    <option name="LAST_COMMIT_MESSAGE" value="开通区域列表，上次忘了add了" />
   </component>
 </project>

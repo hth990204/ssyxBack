@@ -12,6 +12,16 @@ public class Result<T> {
 
     private Result() {}
 
+    public static<T> Result<T> build(T data, Integer code,  String message) {
+        Result<T> result = new Result<>();
+        if (data != null) {
+            result.setData(data);
+        }
+        result.setCode(code);
+        result.setMessage(message);
+        return result;
+    }
+
     public static<T> Result<T> build(T data, ResultCodeEnum resultCodeEnum) {
         Result<T> result = new Result<>();
         if (data != null) {
