@@ -1,9 +1,17 @@
 package com.atguigu.ssyx.product.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.atguigu.ssyx.common.result.Result;
+import com.atguigu.ssyx.model.product.SkuInfo;
+import com.atguigu.ssyx.product.service.SkuInfoService;
+import com.atguigu.ssyx.vo.product.SkuInfoQueryVo;
+import com.atguigu.ssyx.vo.product.SkuInfoVo;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -14,8 +22,25 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-06-10
  */
 @RestController
-@RequestMapping("/product/sku-info")
+@CrossOrigin
+@RequestMapping("/admin/product/skuInfo")
 public class SkuInfoController {
+
+    @Resource
+    private SkuInfoService skuInfoService;
+
+    //      url: `${api_name}/${page}/${limit}`,
+    //      method: 'get',
+    //      params: searchObj
+    @ApiOperation("SKU列表")
+    @GetMapping("{page}/{limit}")
+    public Result list(@PathVariable Long page,
+                       @PathVariable Long limit,
+                       SkuInfoQueryVo skuInfoVo) {
+        Page<SkuInfo> pageParam = new Page<>(page, limit);
+        IPage<SkuInfo> list = skuInfoService.selectPageSkuInfo(pageParam, skuInfoVo);
+        return Result.ok(list);
+    }
 
 }
 
