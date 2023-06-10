@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f30746c7-b2ab-49cd-88d4-9ff55eb55176" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service/service-product/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/ssyx/ServiceProductApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/RegionWareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/atguigu/ssyx/sys/controller/RegionWareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/test/java/com/atguigu/ssyx/CodeGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/test/java/com/atguigu/ssyx/CodeGet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/target/test-classes/com/atguigu/ssyx/CodeGet.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/target/test-classes/com/atguigu/ssyx/CodeGet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/RegionWareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/controller/RegionWareController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/RegionWareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/RegionWareService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/impl/RegionWareServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/target/classes/com/atguigu/ssyx/sys/service/impl/RegionWareServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +72,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/service-util/src/test/java/com/atguigu/ssyx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/service-product/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42643678" />
@@ -72,12 +83,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\workspace\guigu-ssyx-parent\service\service-product\src\main\resources" />
       <recent name="F:\workspace\guigu-ssyx-parent\common\service-util\src\test\java\com\atguigu\ssyx" />
       <recent name="F:\workspace\guigu-ssyx-parent\model\src\test\java\com\atguigu\ssyx" />
       <recent name="F:\workspace\guigu-ssyx-parent\common\common-util\src\main\java\com\atguigu\ssyx\common\utils" />
       <recent name="F:\workspace\guigu-ssyx-parent\model\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.ssyx" />
       <recent name="com.atguigu.ssyx.sys" />
     </key>
   </component>
@@ -88,7 +101,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceSysApplication">
+  <component name="RunManager" selected="Spring Boot.ServiceProductApplication">
     <configuration name="CodeGet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.ssyx.CodeGet" />
       <module name="service-util" />
@@ -128,6 +141,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.ssyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ssyx.ServiceProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceSysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-sys" />
       <extension name="coverage">
@@ -143,6 +169,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServiceProductApplication" />
         <item itemvalue="Spring Boot.ServiceSysApplication" />
         <item itemvalue="Spring Boot.ServiceAclApplication" />
         <item itemvalue="Application.CodeGet" />
@@ -171,7 +198,8 @@
       <workItem from="1686289888409" duration="8712000" />
       <workItem from="1686302518803" duration="5533000" />
       <workItem from="1686311078251" duration="4209000" />
-      <workItem from="1686357325796" duration="4616000" />
+      <workItem from="1686357325796" duration="8458000" />
+      <workItem from="1686384078774" duration="4209000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -243,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686361249255</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="添加开通区域，删除开通区域">
+      <created>1686363761451</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686363761451</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +306,7 @@
     <MESSAGE value="开通区域列表" />
     <MESSAGE value="开通区域列表，上次忘了add了" />
     <MESSAGE value="添加开通区域，根据关键字查询区域，查询所有仓库" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加开通区域，根据关键字查询区域，查询所有仓库" />
+    <MESSAGE value="添加开通区域，删除开通区域" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加开通区域，删除开通区域" />
   </component>
 </project>
