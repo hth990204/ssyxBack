@@ -16,3 +16,9 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+
+aliyun:
+  endpoint: oss-cn-nanjing.aliyuncs.com
+  keyid: LTAI5tMn8YxS5MD57RM1MAJH
+  keysecret: ZABMp49yGRR4kbG5OIJXxndiBv4W06
+  bucketname: ssyx-atguigu-hth
