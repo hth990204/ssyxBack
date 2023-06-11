@@ -4,6 +4,8 @@ import com.atguigu.ssyx.model.product.SkuAttrValue;
 import com.atguigu.ssyx.model.product.SkuImage;
 import com.atguigu.ssyx.model.product.SkuInfo;
 import com.atguigu.ssyx.model.product.SkuPoster;
+import com.atguigu.ssyx.mq.constant.MqConst;
+import com.atguigu.ssyx.mq.service.RabbitService;
 import com.atguigu.ssyx.product.mapper.SkuInfoMapper;
 import com.atguigu.ssyx.product.service.SkuAttrValueService;
 import com.atguigu.ssyx.product.service.SkuImageService;
@@ -43,6 +45,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
 
     @Resource
     private SkuImageService skuImageService;
+
+    @Resource
+    private RabbitService rabbitService;
 
     @Override
     public IPage<SkuInfo> selectPageSkuInfo(Page<SkuInfo> pageParam, SkuInfoQueryVo skuInfoQueryVo) {
@@ -183,12 +188,12 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
             SkuInfo skuInfo = baseMapper.selectById(id);
             skuInfo.setPublishStatus(status);
             baseMapper.updateById(skuInfo);
-            //TODO 整合MQ同步到ES中
+            rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_UPPER, id);
         } else {
             SkuInfo skuInfo = baseMapper.selectById(id);
             skuInfo.setPublishStatus(status);
             baseMapper.updateById(skuInfo);
-            //TODO 整合MQ同步到ES中
+            rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_LOWER, id);
         }
     }
 
@@ -198,6 +203,12 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
         skuInfoUp.setId(skuId);
         skuInfoUp.setIsNewPerson(status);
         baseMapper.updateById(skuInfoUp);
+    }
+
+    @Override
+    public void removeByIdAndEls(Long id) {
+        baseMapper.deleteById(id);
+        rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_LOWER, id);
     }
 
 }
