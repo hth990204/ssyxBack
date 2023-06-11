@@ -100,4 +100,104 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
         }
 
     }
+
+    @Override
+    public SkuInfoVo getSkuInfo(Long id) {
+        SkuInfoVo skuInfoVo = new SkuInfoVo();
+
+        SkuInfo skuInfo = baseMapper.selectById(id);
+
+        // 图片
+        List<SkuImage> imageList = skuImageService.getImageListBySkuId(id);
+
+        // 海报
+        List<SkuPoster> posterList = skuPosterService.getPosterListBySkuId(id);
+
+        // 属性
+        List<SkuAttrValue> attrValueList = skuAttrValueService.getattrValueBySkuId(id);
+
+        BeanUtils.copyProperties(skuInfo, skuInfoVo);
+        skuInfoVo.setSkuImagesList(imageList);
+        skuInfoVo.setSkuPosterList(posterList);
+        skuInfoVo.setSkuAttrValueList(attrValueList);
+        return skuInfoVo;
+    }
+
+    @Override
+    public void updateSkuInfo(SkuInfoVo skuInfoVo) {
+        // Sku基本信息
+        SkuInfo skuInfo = new SkuInfo();
+        BeanUtils.copyProperties(skuInfoVo, skuInfo);
+        baseMapper.updateById(skuInfo);
+
+        Long id = skuInfoVo.getId();
+        // 海报
+        LambdaQueryWrapper<SkuPoster> wrapperSkuPoster = new LambdaQueryWrapper<>();
+        wrapperSkuPoster.eq(SkuPoster::getSkuId, id);
+        skuPosterService.remove(wrapperSkuPoster);
+        List<SkuPoster> skuPosterList = skuInfoVo.getSkuPosterList();
+        if (!CollectionUtils.isEmpty(skuPosterList)) {
+            for (SkuPoster skuPoster : skuPosterList) {
+                skuPoster.setSkuId(skuInfo.getId());
+            }
+            skuPosterService.saveBatch(skuPosterList);
+        }
+
+
+        // 图片
+        LambdaQueryWrapper<SkuImage> wrapperSkuImage = new LambdaQueryWrapper<>();
+        wrapperSkuImage.eq(SkuImage::getSkuId, id);
+        skuImageService.remove(wrapperSkuImage);
+        List<SkuImage> skuImagesList = skuInfoVo.getSkuImagesList();
+        if (!CollectionUtils.isEmpty(skuImagesList)) {
+            for (SkuImage skuImage : skuImagesList) {
+                skuImage.setSkuId(skuInfo.getId());
+            }
+            skuImageService.saveBatch(skuImagesList);
+        }
+
+        // 属性
+        LambdaQueryWrapper<SkuAttrValue> wrapperSkuAttrValue = new LambdaQueryWrapper<>();
+        wrapperSkuAttrValue.eq(SkuAttrValue::getSkuId, id);
+        skuAttrValueService.remove(wrapperSkuAttrValue);
+        List<SkuAttrValue> skuAttrValueList = skuInfoVo.getSkuAttrValueList();
+        if (!CollectionUtils.isEmpty(skuAttrValueList)) {
+            for (SkuAttrValue skuAttrValue : skuAttrValueList) {
+                skuAttrValue.setSkuId(skuInfo.getId());
+            }
+            skuAttrValueService.saveBatch(skuAttrValueList);
+        }
+
+    }
+
+    @Override
+    public void check(Long id, Integer status) {
+        SkuInfo skuInfo = baseMapper.selectById(id);
+        skuInfo.setCheckStatus(status);
+        baseMapper.updateById(skuInfo);
+    }
+
+    @Override
+    public void publish(Long id, Integer status) {
+        if (status == 1) {
+            SkuInfo skuInfo = baseMapper.selectById(id);
+            skuInfo.setPublishStatus(status);
+            baseMapper.updateById(skuInfo);
+            //TODO 整合MQ同步到ES中
+        } else {
+            SkuInfo skuInfo = baseMapper.selectById(id);
+            skuInfo.setPublishStatus(status);
+            baseMapper.updateById(skuInfo);
+            //TODO 整合MQ同步到ES中
+        }
+    }
+
+    @Override
+    public void isNewPerson(Long skuId, Integer status) {
+        SkuInfo skuInfoUp = new SkuInfo();
+        skuInfoUp.setId(skuId);
+        skuInfoUp.setIsNewPerson(status);
+        baseMapper.updateById(skuInfoUp);
+    }
+
 }
