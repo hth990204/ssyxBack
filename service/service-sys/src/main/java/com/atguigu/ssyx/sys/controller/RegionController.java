@@ -20,7 +20,6 @@ import java.util.List;
  * @since 2023-06-09
  */
 @Api(tags = "区域管理")
-@CrossOrigin
 @RestController
 @RequestMapping("/admin/sys/region")
 public class RegionController {

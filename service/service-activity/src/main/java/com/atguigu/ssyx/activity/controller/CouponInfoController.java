@@ -21,7 +21,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/admin/activity/couponInfo")
-@CrossOrigin
 public class CouponInfoController {
 
     @Resource

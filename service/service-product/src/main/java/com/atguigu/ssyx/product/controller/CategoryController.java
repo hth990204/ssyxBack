@@ -23,7 +23,6 @@ import java.util.List;
  * @author atguigu
  * @since 2023-06-10
  */
-@CrossOrigin
 @Api(tags = "商品分类")
 @RestController
 @RequestMapping("/admin/product/category")

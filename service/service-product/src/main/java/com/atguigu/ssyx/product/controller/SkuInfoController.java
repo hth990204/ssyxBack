@@ -30,7 +30,6 @@ import java.util.List;
  * @since 2023-06-10
  */
 @RestController
-@CrossOrigin
 @RequestMapping("/admin/product/skuInfo")
 public class SkuInfoController {
 
