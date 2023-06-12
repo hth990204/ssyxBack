@@ -211,4 +211,17 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
         rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_LOWER, id);
     }
 
+    @Override
+    public List<SkuInfo> findSkuInfoList(List<Long> skuIdList) {
+        return baseMapper.selectBatchIds(skuIdList);
+    }
+
+    // 关键字匹配sku
+    @Override
+    public List<SkuInfo> findSkuInfoByKeyword(String keyword) {
+        return baseMapper.selectList(
+                new LambdaQueryWrapper<SkuInfo>().like(SkuInfo::getSkuName, keyword)
+        );
+    }
+
 }

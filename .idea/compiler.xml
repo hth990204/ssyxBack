@@ -14,6 +14,7 @@
         <module name="service-search" />
         <module name="model" />
         <module name="service-util" />
+        <module name="service-activity" />
         <module name="service-acl" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="serice-util" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service-acl" options="-parameters" />
+      <module name="service-activity" options="-parameters" />
       <module name="service-client" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-product-client" options="-parameters" />
