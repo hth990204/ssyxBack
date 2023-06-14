@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f30746c7-b2ab-49cd-88d4-9ff55eb55176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/common-util/src/main/java/com/atguigu/ssyx/common/utils/JwtHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/constant/RedisConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/ServiceUserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/controller/WeixinApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/mapper/LeaderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/mapper/UserDeliveryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/utils/ConstantPropertiesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/utils/HttpClientUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/auth/AuthContextHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/auth/LoginMvcConfigurerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/auth/UserLoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/controller/WeixinApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/controller/WeixinApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-user/target/classes/com/atguigu/ssyx/user/controller/WeixinApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-user/target/classes/com/atguigu/ssyx/user/controller/WeixinApiController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +22,8 @@
       <list>
         <option value="Enum" />
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -240,7 +226,7 @@
       <workItem from="1686530623780" duration="10424000" />
       <workItem from="1686548652588" duration="8813000" />
       <workItem from="1686567283427" duration="4766000" />
-      <workItem from="1686739350359" duration="6286000" />
+      <workItem from="1686739350359" duration="8251000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -396,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686572050533</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="登录功能，只存入到了数据库和redis中">
+      <created>1686754962157</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1686754962157</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +429,8 @@
     <MESSAGE value="营销活动，一堆内容，不想写commit了&#10;活动列表、远程调用查询活动商品" />
     <MESSAGE value="添加、修改优惠券规则" />
     <MESSAGE value="引入网关，去掉跨域" />
-    <option name="LAST_COMMIT_MESSAGE" value="引入网关，去掉跨域" />
+    <MESSAGE value="登录功能，只存入到了数据库和redis中" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录功能，只存入到了数据库和redis中" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -465,6 +459,26 @@
           <url>file://$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/CouponInfoServiceImpl.java</url>
           <line>90</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/auth/UserLoginInterceptor.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/ssyx/common/auth/UserLoginInterceptor.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/controller/WeixinApiController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/service-user/src/main/java/com/atguigu/ssyx/user/controller/WeixinApiController.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
