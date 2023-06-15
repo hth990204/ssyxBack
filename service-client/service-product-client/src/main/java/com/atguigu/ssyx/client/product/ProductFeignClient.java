@@ -28,6 +28,14 @@ public interface ProductFeignClient {
     public List<SkuInfo> findSkuInfoByKeyword(@PathVariable("keyword") String keyword);
 
     // 根据分类id获取分类列表
-    @PostMapping("api/product/inner/findCategoryList")
+    @PostMapping("/api/product/inner/findCategoryList")
     public List<Category> findCategoryList(List<Long> rangeIdList);
+
+    // 获取分类列表
+    @PostMapping("/api/product/inner/findAllCategoryList")
+    public List<Category> findAllCategoryList();
+
+    // 获取新人商品
+    @GetMapping("/api/product/inner/findNewPersonSkuInfoList")
+    public List<SkuInfo> findNewPersonSkuInfoList();
 }

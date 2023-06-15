@@ -63,8 +63,13 @@ public class WeixinApiController {
 
         // 返回两个值 session_key 和openid
         JSONObject jsonObject = JSONObject.parseObject(result);
-        String session_key = jsonObject.getString("session_key");
-        String openid = jsonObject.getString("和openid");
+//        String session_key = jsonObject.getString("session_key");
+//        String openid = jsonObject.getString("openid");
+
+//        TODO 为了测试，openId写固定
+        String session_key = "";
+        String openid = "odo3j4uGJf6Hl2FopkEOLGxr7LE4";
+
 
 
         // 是否第一次登录

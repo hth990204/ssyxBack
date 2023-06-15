@@ -45,7 +45,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return null;
         }
         // 根据团长id查询其他信息
-        Leader leader = leaderMapper.selectById(userDelivery);
+        Leader leader = leaderMapper.selectById(userDelivery.getLeaderId());
 
         LeaderAddressVo leaderAddressVo = new LeaderAddressVo();
         BeanUtils.copyProperties(leader, leaderAddressVo);
