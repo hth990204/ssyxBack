@@ -18,4 +18,16 @@
         </where>
     </select>
 
+    <resultMap id="ActivityRuleMap" type="com.atguigu.ssyx.model.activity.ActivityRule" autoMapping="true"></resultMap>
+<!--    // 根据skuId查询对应的活动规则列表-->
+    <select id="findActivityRule" resultMap="ActivityRuleMap">
+        select  info.activity_type as activityType,
+                rule.id,rule.activity_id,rule.condition_amount,rule.condition_num,rule.benefit_amount,rule.benefit_discount
+        FROM activity_info info
+        inner join activity_sku sku on info.id=sku.activity_id
+        inner join activity_rule rule on info.id=rule.activity_id
+        where sku.sku_id=#{skuId}
+          and now() between info.start_time and info.end_time
+        order by rule.condition_amount desc
+    </select>
 </mapper>
