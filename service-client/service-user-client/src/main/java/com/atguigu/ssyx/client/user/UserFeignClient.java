@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient("service-user")
+@FeignClient(value = "service-user")
 public interface UserFeignClient {
 
     // 根据userId得到提货点信息
