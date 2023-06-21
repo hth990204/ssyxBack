@@ -40,4 +40,6 @@ public interface SkuInfoService extends IService<SkuInfo> {
     List<SkuInfo> findSkuInfoByKeyword(String keyword);
 
     List<SkuInfo> findNewPersonSkuInfoList();
+
+    SkuInfoVo getSkuInfoVo(Long skuId);
 }

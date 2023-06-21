@@ -64,4 +64,9 @@ public class ProductInnerController {
         return skuInfoService.findNewPersonSkuInfoList();
     }
 
+    // 根据SkuId获取sku信息
+    @GetMapping("/inner/getSkuInfoVo/{skuId}")
+    public SkuInfoVo getSkuInfoVo(@PathVariable Long skuId) {
+        return skuInfoService.getSkuInfoVo(skuId);
+    }
 }

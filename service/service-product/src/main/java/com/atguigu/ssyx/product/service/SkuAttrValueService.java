@@ -15,5 +15,5 @@ import java.util.List;
  */
 public interface SkuAttrValueService extends IService<SkuAttrValue> {
 
-    List<SkuAttrValue> getattrValueBySkuId(Long id);
+    List<SkuAttrValue> getAttrValueBySkuId(Long id);
 }

@@ -4,11 +4,13 @@ import com.atguigu.ssyx.activity.mapper.ActivityInfoMapper;
 import com.atguigu.ssyx.activity.mapper.ActivityRuleMapper;
 import com.atguigu.ssyx.activity.mapper.ActivitySkuMapper;
 import com.atguigu.ssyx.activity.service.ActivityInfoService;
+import com.atguigu.ssyx.activity.service.CouponInfoService;
 import com.atguigu.ssyx.client.product.ProductFeignClient;
 import com.atguigu.ssyx.enums.ActivityType;
 import com.atguigu.ssyx.model.activity.ActivityInfo;
 import com.atguigu.ssyx.model.activity.ActivityRule;
 import com.atguigu.ssyx.model.activity.ActivitySku;
+import com.atguigu.ssyx.model.activity.CouponInfo;
 import com.atguigu.ssyx.model.product.SkuInfo;
 import com.atguigu.ssyx.vo.activity.ActivityRuleVo;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -44,6 +46,9 @@ public class ActivityInfoServiceImpl extends ServiceImpl<ActivityInfoMapper, Act
 
     @Resource
     private ProductFeignClient productFeignClient;
+
+    @Resource
+    private CouponInfoService couponInfoService;
 
     @Override
     public IPage<ActivityInfo> selectPage(Page<ActivityInfo> pageParam) {
@@ -153,6 +158,32 @@ public class ActivityInfoServiceImpl extends ServiceImpl<ActivityInfoMapper, Act
             }
         });
         return result;
+    }
+
+    // 根据skuId获取营销数据和优惠券
+    @Override
+    public Map<String, Object> findActivityAndCoupon(Long skuId, Long userId) {
+        // 根据skuId获取营销sku营销活动
+        List<ActivityRule> activityRuleList = this.findActivityRuleBySkuId(skuId);
+
+        // 根据skuId + userId查询优惠券信息
+        List<CouponInfo> couponInfoList = couponInfoService.findCouponInfoList(skuId, userId);
+
+        // 封装到map集合
+        Map<String, Object> map = new HashMap<>();
+        map.put("activityRuleList", activityRuleList);
+        map.put("couponInfoList", couponInfoList);
+        return map;
+    }
+
+    @Override
+    public List<ActivityRule> findActivityRuleBySkuId(Long skuId) {
+        List<ActivityRule> activityRule = baseMapper.findActivityRule(skuId);
+        for (ActivityRule rule : activityRule) {
+            String ruleDesc = this.getRuleDesc(rule);
+            rule.setRuleDesc(ruleDesc);
+        }
+        return activityRule;
     }
 
     //构造规则名称的方法

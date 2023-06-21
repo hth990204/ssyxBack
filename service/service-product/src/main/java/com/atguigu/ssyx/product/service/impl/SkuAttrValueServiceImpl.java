@@ -22,7 +22,7 @@ import java.util.List;
 public class SkuAttrValueServiceImpl extends ServiceImpl<SkuAttrValueMapper, SkuAttrValue> implements SkuAttrValueService {
 
     @Override
-    public List<SkuAttrValue> getattrValueBySkuId(Long id) {
+    public List<SkuAttrValue> getAttrValueBySkuId(Long id) {
         LambdaQueryWrapper<SkuAttrValue> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SkuAttrValue::getSkuId, id);
         List<SkuAttrValue> attrValueList = baseMapper.selectList(wrapper);

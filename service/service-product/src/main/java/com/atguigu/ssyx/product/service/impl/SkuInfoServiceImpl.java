@@ -17,7 +17,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import io.swagger.models.auth.In;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -119,7 +118,7 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
         List<SkuPoster> posterList = skuPosterService.getPosterListBySkuId(id);
 
         // 属性
-        List<SkuAttrValue> attrValueList = skuAttrValueService.getattrValueBySkuId(id);
+        List<SkuAttrValue> attrValueList = skuAttrValueService.getAttrValueBySkuId(id);
 
         BeanUtils.copyProperties(skuInfo, skuInfoVo);
         skuInfoVo.setSkuImagesList(imageList);
@@ -233,6 +232,28 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
         Page<SkuInfo> skuInfoPage = baseMapper.selectPage(pageParam, wrapper);
         List<SkuInfo> records = skuInfoPage.getRecords();
         return records;
+    }
+
+    @Override
+    public SkuInfoVo getSkuInfoVo(Long skuId) {
+        SkuInfoVo skuInfoVo = new SkuInfoVo();
+        // 查询SkuInfo
+        SkuInfo skuInfo = baseMapper.selectById(skuId);
+
+        // skuId查询sku图片
+        List<SkuImage> imageList = skuImageService.getImageListBySkuId(skuId);
+
+        // skuId查询sku海报
+        List<SkuPoster> posterList = skuPosterService.getPosterListBySkuId(skuId);
+
+        // skuId查询sku属性
+        List<SkuAttrValue> attrValueList = skuAttrValueService.getAttrValueBySkuId(skuId);
+
+        BeanUtils.copyProperties(skuInfo, skuInfoVo);
+        skuInfoVo.setSkuImagesList(imageList);
+        skuInfoVo.setSkuPosterList(posterList);
+        skuInfoVo.setSkuAttrValueList(attrValueList);
+        return skuInfoVo;
     }
 
 }

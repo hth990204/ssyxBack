@@ -3,10 +3,7 @@ package com.atguigu.ssyx.activity.api;
 import com.atguigu.ssyx.activity.service.ActivityInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -24,5 +21,13 @@ public class ActivityApiController {
     @PostMapping("inner/findActivity")
     public Map<Long, List<String>> findActivity(@RequestBody List<Long> skuIdList) {
         return activityInfoService.findActivity(skuIdList);
+    }
+
+    @ApiOperation("根据skuId获取营销数据和优惠券")
+    @GetMapping("/inner/findActivityAndCoupon/{skuId}/{userId}")
+    public Map<String, Object> findActivityAndCoupon(@PathVariable Long skuId,
+                                                     @PathVariable Long userId) {
+
+        return activityInfoService.findActivityAndCoupon(skuId, userId);
     }
 }

@@ -2,6 +2,7 @@ package com.atguigu.ssyx.activity.mapper;
 
 import com.atguigu.ssyx.model.activity.ActivitySku;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author atguigu
  * @since 2023-06-12
  */
+@Repository
 public interface ActivitySkuMapper extends BaseMapper<ActivitySku> {
 
 }

@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.connection.ConnectionUtils;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -22,6 +23,7 @@ import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,6 +38,9 @@ public class SkuServiceImpl implements SkuService {
 
     @Resource
     private ProductFeignClient productFeignClient;
+
+    @Resource
+    private RedisTemplate redisTemplate;
 
 
     @Override
@@ -124,5 +129,21 @@ public class SkuServiceImpl implements SkuService {
         }
 
         return pageModel;
+    }
+
+    // 更新商品热度
+    @Override
+    public void incrHotScore(Long skuId) {
+        String key = "hotScore";
+        // redis保存数据，每次+1
+        Double hotScore = redisTemplate.opsForZSet().incrementScore(key, "skuId:" + skuId, 1);
+        // 规则
+        if (hotScore%10 == 0) {
+            //更新ES
+            Optional<SkuEs> optional = skuRepository.findById(skuId);
+            SkuEs skuEs = optional.get();
+            skuEs.setHotScore(Math.round(hotScore));
+            skuRepository.save(skuEs);
+        }
     }
 }
