@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f30746c7-b2ab-49cd-88d4-9ff55eb55176" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service/service-cart/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/ServiceCartApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/controller/CartApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/CartInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/impl/CartInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/controller/CartApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/controller/CartApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/CartInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/CartInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/impl/CartInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/impl/CartInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +231,7 @@
       <workItem from="1686903016873" duration="9197000" />
       <workItem from="1687003879529" duration="8659000" />
       <workItem from="1687062182356" duration="7316000" />
-      <workItem from="1687330290148" duration="5286000" />
+      <workItem from="1687330290148" duration="6831000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -436,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687330392201</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="添加商品到购物车">
+      <created>1687339560448</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1687339560448</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="获取用户的角色" />
     <MESSAGE value="为用户分配角色" />
     <MESSAGE value="查询菜单和删除菜单" />
     <MESSAGE value="查询角色权限，前端没有完成功能，凑活看看" />
@@ -479,7 +478,8 @@
     <MESSAGE value="小bug修复了一下" />
     <MESSAGE value="商品分类和搜素" />
     <MESSAGE value="商品详情页" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品详情页" />
+    <MESSAGE value="添加商品到购物车" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加商品到购物车" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -99,6 +100,36 @@ public class CartInfoServiceImpl implements CartInfoService {
 
         //6 设置有效时间
         this.setCartKeyExpire(cartKey);
+    }
+
+    // 根据skuId删除购物车
+    @Override
+    public void deleteCart(Long skuId, Long userId) {
+        BoundHashOperations<String, String, CartInfo> hashOperations = redisTemplate.boundHashOps(this.getCartKey(userId));
+        if (hashOperations.hasKey(skuId.toString())) {
+            hashOperations.delete(skuId.toString());
+        }
+    }
+
+    // 清空购物车
+    @Override
+    public void deleteAllCart(Long userId) {
+        String cartKey = this.getCartKey(userId);
+        BoundHashOperations<String, String, CartInfo> hashOperations = redisTemplate.boundHashOps(cartKey);
+        List<CartInfo> cartInfoList = hashOperations.values();
+        for (CartInfo cartInfo : cartInfoList) {
+            hashOperations.delete(cartInfo.getSkuId().toString());
+        }
+    }
+
+    // 批量删除购物车skuId
+    @Override
+    public void batchDeleteCart(Long userId, List<Long> skuIdList) {
+        String cartKey = this.getCartKey(userId);
+        BoundHashOperations<String, String, CartInfo> hashOperations = redisTemplate.boundHashOps(cartKey);
+        skuIdList.forEach(skuId -> {
+            hashOperations.delete(skuId.toString());
+        });
     }
 
     // 设置key 过期时间
