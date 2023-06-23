@@ -1,5 +1,7 @@
 package com.atguigu.ssyx.cart.service;
 
+import com.atguigu.ssyx.model.order.CartInfo;
+
 import java.util.List;
 
 public interface CartInfoService {
@@ -10,4 +12,6 @@ public interface CartInfoService {
     void deleteAllCart(Long userId);
 
     void batchDeleteCart(Long userId, List<Long> skuIdList);
+
+    List<CartInfo> getCartList(Long userId);
 }

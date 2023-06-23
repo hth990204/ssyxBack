@@ -3,6 +3,7 @@ package com.atguigu.ssyx.cart.controller;
 import com.atguigu.ssyx.cart.service.CartInfoService;
 import com.atguigu.ssyx.common.auth.AuthContextHolder;
 import com.atguigu.ssyx.common.result.Result;
+import com.atguigu.ssyx.model.order.CartInfo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -48,6 +49,15 @@ public class CartApiController {
         Long userId = AuthContextHolder.getUserId();
         cartInfoService.batchDeleteCart(userId, skuIdList);
         return Result.ok(null);
+    }
+
+    // 购物车列表
+    @GetMapping("/cartList")
+    public Result cartList() {
+        // 获取用户
+        Long userId = AuthContextHolder.getUserId();
+        List<CartInfo> cartInfoList =  cartInfoService.getCartList(userId);
+        return Result.ok(cartInfoList);
     }
 
 }

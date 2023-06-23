@@ -231,7 +231,7 @@
       <workItem from="1686903016873" duration="9197000" />
       <workItem from="1687003879529" duration="8659000" />
       <workItem from="1687062182356" duration="7316000" />
-      <workItem from="1687330290148" duration="6831000" />
+      <workItem from="1687330290148" duration="8196000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -436,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687339560448</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="删除购物车">
+      <created>1687349285922</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1687349285922</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="为用户分配角色" />
     <MESSAGE value="查询菜单和删除菜单" />
     <MESSAGE value="查询角色权限，前端没有完成功能，凑活看看" />
     <MESSAGE value="开通区域列表" />
@@ -479,7 +485,8 @@
     <MESSAGE value="商品分类和搜素" />
     <MESSAGE value="商品详情页" />
     <MESSAGE value="添加商品到购物车" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加商品到购物车" />
+    <MESSAGE value="删除购物车" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除购物车" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
