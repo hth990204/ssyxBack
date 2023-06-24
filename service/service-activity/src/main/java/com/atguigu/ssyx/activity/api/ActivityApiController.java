@@ -1,6 +1,8 @@
 package com.atguigu.ssyx.activity.api;
 
 import com.atguigu.ssyx.activity.service.ActivityInfoService;
+import com.atguigu.ssyx.model.order.CartInfo;
+import com.atguigu.ssyx.vo.order.OrderConfirmVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -30,4 +32,12 @@ public class ActivityApiController {
 
         return activityInfoService.findActivityAndCoupon(skuId, userId);
     }
+
+    // 获取购物车里满足条件的优惠券和活动
+    @PostMapping("/inner/findCartActivityAndCoupon/{userId}")
+    public OrderConfirmVo findCartActivityAndCoupon(@RequestBody List<CartInfo> cartInfoList,
+                                                    @PathVariable Long userId) {
+        return activityInfoService.findCartActivityAndCoupon(cartInfoList, userId);
+    };
+
 }

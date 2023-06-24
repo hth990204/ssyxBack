@@ -2,8 +2,11 @@ package com.atguigu.ssyx.activity.service;
 
 import com.atguigu.ssyx.model.activity.ActivityInfo;
 import com.atguigu.ssyx.model.activity.ActivityRule;
+import com.atguigu.ssyx.model.order.CartInfo;
 import com.atguigu.ssyx.model.product.SkuInfo;
 import com.atguigu.ssyx.vo.activity.ActivityRuleVo;
+import com.atguigu.ssyx.vo.order.CartInfoVo;
+import com.atguigu.ssyx.vo.order.OrderConfirmVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -35,4 +38,9 @@ public interface ActivityInfoService extends IService<ActivityInfo> {
 
     // 根据skuId获取到活动的规则
     List<ActivityRule> findActivityRuleBySkuId(Long skuId);
+
+    OrderConfirmVo findCartActivityAndCoupon(List<CartInfo> cartInfoList, Long userId);
+
+    // 获取购物项规则
+    List<CartInfoVo> findCartActivityList(List<CartInfo> cartInfoList);
 }

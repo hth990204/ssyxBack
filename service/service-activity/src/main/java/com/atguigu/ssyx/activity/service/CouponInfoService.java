@@ -1,6 +1,7 @@
 package com.atguigu.ssyx.activity.service;
 
 import com.atguigu.ssyx.model.activity.CouponInfo;
+import com.atguigu.ssyx.model.order.CartInfo;
 import com.atguigu.ssyx.vo.activity.CouponRuleVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -27,4 +28,7 @@ public interface CouponInfoService extends IService<CouponInfo> {
     void saveCouponRule(CouponRuleVo couponRuleVo);
 
     List<CouponInfo> findCouponInfoList(Long skuId, Long userId);
+
+    //3 获取购物车可用优惠券列表
+    List<CouponInfo> findCartCouponInfo(List<CartInfo> cartInfoList, Long userId);
 }

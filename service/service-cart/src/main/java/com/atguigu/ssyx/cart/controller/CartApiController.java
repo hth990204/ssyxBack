@@ -1,9 +1,11 @@
 package com.atguigu.ssyx.cart.controller;
 
+import com.atguigu.ssyx.activity.client.ActivityFeignClient;
 import com.atguigu.ssyx.cart.service.CartInfoService;
 import com.atguigu.ssyx.common.auth.AuthContextHolder;
 import com.atguigu.ssyx.common.result.Result;
 import com.atguigu.ssyx.model.order.CartInfo;
+import com.atguigu.ssyx.vo.order.OrderConfirmVo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -15,6 +17,37 @@ public class CartApiController {
 
     @Resource
     private CartInfoService cartInfoService;
+
+    @Resource
+    private ActivityFeignClient activityFeignClient;
+
+    // 1 根据skuId选中
+    @GetMapping("/checkCart/{skuId}/{isChecked}")
+    public Result checkCart(@PathVariable Long skuId,
+                            @PathVariable Integer isChecked) {
+        // 获取userId
+        Long userId = AuthContextHolder.getUserId();
+        cartInfoService.checkCart(userId, skuId, isChecked);
+        return Result.ok(null);
+    }
+    // 2 全选
+    @GetMapping("/checkAllCart/{isChecked}")
+    public Result checkAllCart(@PathVariable Integer isChecked) {
+        // 获取userId
+        Long userId = AuthContextHolder.getUserId();
+        cartInfoService.checkAllCart(userId, isChecked);
+        return Result.ok(null);
+    }
+
+    // 3 批量选中
+    @PostMapping("batchCheckCart/{isChecked}")
+    public Result batchCheckCart(@RequestBody List<Long> skuIdList,
+                                 @PathVariable(value = "isChecked") Integer isChecked) {
+        // 如何获取userId
+        Long userId = AuthContextHolder.getUserId();
+        cartInfoService.batchCheckCart(skuIdList, userId, isChecked);
+        return Result.ok(null);
+    }
 
     // 添加商品到购物车
     // userId， skuId， skuNum
@@ -58,6 +91,17 @@ public class CartApiController {
         Long userId = AuthContextHolder.getUserId();
         List<CartInfo> cartInfoList =  cartInfoService.getCartList(userId);
         return Result.ok(cartInfoList);
+    }
+
+    // 查询带优惠卷的购物车
+    @GetMapping("/activityCartList")
+    public Result activityCartList() {
+        // 获取用户Id
+        Long userId = AuthContextHolder.getUserId();
+        List<CartInfo> cartInfoList = cartInfoService.getCartList(userId);
+
+        OrderConfirmVo orderTradeVo = activityFeignClient.findCartActivityAndCoupon(cartInfoList, userId);
+        return Result.ok(orderTradeVo);
     }
 
 }

@@ -159,6 +159,48 @@ public class CartInfoServiceImpl implements CartInfoService {
         return cartInfoList;
     }
 
+    // 根据skuId选中
+    @Override
+    public void checkCart(Long userId, Long skuId, Integer isChecked) {
+        // 获取redis的key
+        String cartKey = this.getCartKey(userId);
+        // cartKey获取field-value
+        BoundHashOperations<String, String, CartInfo> boundHashOperations = redisTemplate.boundHashOps(cartKey);
+        // 根据field(skuId)获取value(CartInfo)
+        CartInfo cartInfo = boundHashOperations.get(skuId.toString());
+        if (cartInfo != null) {
+            cartInfo.setIsChecked(isChecked);
+            boundHashOperations.put(skuId.toString(), cartInfo);
+            this.setCartKeyExpire(cartKey);
+        }
+    }
+
+    // 全选
+    @Override
+    public void checkAllCart(Long userId, Integer isChecked) {
+        String cartKey = this.getCartKey(userId);
+        BoundHashOperations<String, String, CartInfo> boundHashOperations = redisTemplate.boundHashOps(cartKey);
+        List<CartInfo> cartInfoList = boundHashOperations.values();
+        cartInfoList.stream().forEach(cartInfo -> {
+            cartInfo.setIsChecked(isChecked);
+            boundHashOperations.put(cartInfo.getSkuId().toString(), cartInfo);
+        });
+        this.setCartKeyExpire(cartKey);
+    }
+
+    // 批量选中
+    @Override
+    public void batchCheckCart(List<Long> skuIdList, Long userId, Integer isChecked) {
+        String cartKey = this.getCartKey(userId);
+        BoundHashOperations<String, String, CartInfo> boundHashOperations = redisTemplate.boundHashOps(cartKey);
+        skuIdList.forEach(skuId -> {
+            CartInfo cartInfo = boundHashOperations.get(skuId.toString());
+            cartInfo.setIsChecked(isChecked);
+            boundHashOperations.put(cartInfo.getSkuId().toString(),cartInfo);
+        });
+        this.setCartKeyExpire(cartKey);
+    }
+
     // 设置key 过期时间
     private void setCartKeyExpire(String key) {
         redisTemplate.expire(key, RedisConst.USER_CART_EXPIRE, TimeUnit.SECONDS);

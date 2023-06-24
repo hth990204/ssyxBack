@@ -14,4 +14,13 @@ public interface CartInfoService {
     void batchDeleteCart(Long userId, List<Long> skuIdList);
 
     List<CartInfo> getCartList(Long userId);
+
+    //根据skuId选中
+    void checkCart(Long userId, Long skuId, Integer isChecked);
+
+    // 全选
+    void checkAllCart(Long userId, Integer isChecked);
+
+    // 批量选中
+    void batchCheckCart(List<Long> skuIdList, Long userId, Integer isChecked);
 }

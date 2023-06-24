@@ -6,6 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="f30746c7-b2ab-49cd-88d4-9ff55eb55176" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-client/service-activity-client/src/main/java/com/atguigu/ssyx/activity/client/ActivityFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-client/service-activity-client/src/main/java/com/atguigu/ssyx/activity/client/ActivityFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-client/service-activity-client/target/classes/com/atguigu/ssyx/activity/client/ActivityFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-client/service-activity-client/target/classes/com/atguigu/ssyx/activity/client/ActivityFeignClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/api/ActivityApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/api/ActivityApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/mapper/ActivityInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/mapper/ActivityInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/mapper/CouponInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/mapper/CouponInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/ActivityInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/ActivityInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/CouponInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/CouponInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/CouponInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/CouponInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/resources/mapper/ActivityInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/mapper/ActivityInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/resources/mapper/CouponInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/mapper/CouponInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/api/ActivityApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/api/ActivityApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/mapper/ActivityInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/mapper/ActivityInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/mapper/CouponInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/mapper/CouponInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/ActivityInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/ActivityInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/CouponInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/CouponInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/impl/CouponInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/com/atguigu/ssyx/activity/service/impl/CouponInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/target/classes/mapper/ActivityInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/target/classes/mapper/ActivityInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/controller/CartApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/controller/CartApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/CartInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/CartInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/impl/CartInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/atguigu/ssyx/cart/service/impl/CartInfoServiceImpl.java" afterDir="false" />
@@ -99,7 +119,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.ServiceHomeApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="common-util" />
       <method v="2">
@@ -113,15 +133,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-gateway" />
+    <configuration name="ServiceActivityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-activity" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.atguigu.ssyx.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ssyx.ServiceGatewayApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ssyx.ServiceActivityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceHomeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-home" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.ssyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ssyx.ServiceHomeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,19 +185,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceSysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-sys" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.ssyx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ssyx.ServiceSysApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServiceUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-user" />
       <extension name="coverage">
@@ -179,19 +199,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.ServiceProductApplication" />
-      <item itemvalue="Spring Boot.ServiceSysApplication" />
       <item itemvalue="Spring Boot.ServiceUserApplication" />
       <item itemvalue="Spring Boot.ServiceSearchApplication" />
-      <item itemvalue="Spring Boot.ServiceGatewayApplication" />
+      <item itemvalue="Spring Boot.ServiceActivityApplication" />
+      <item itemvalue="Spring Boot.ServiceProductApplication" />
+      <item itemvalue="Spring Boot.ServiceHomeApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServiceGatewayApplication" />
+        <item itemvalue="Spring Boot.ServiceActivityApplication" />
+        <item itemvalue="Spring Boot.ServiceHomeApplication" />
+        <item itemvalue="Spring Boot.ServiceProductApplication" />
         <item itemvalue="Spring Boot.ServiceSearchApplication" />
         <item itemvalue="Spring Boot.ServiceUserApplication" />
-        <item itemvalue="Spring Boot.ServiceSysApplication" />
-        <item itemvalue="Spring Boot.ServiceProductApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +252,8 @@
       <workItem from="1687003879529" duration="8659000" />
       <workItem from="1687062182356" duration="7316000" />
       <workItem from="1687330290148" duration="8196000" />
+      <workItem from="1687527110496" duration="4795000" />
+      <workItem from="1687588061788" duration="12973000" />
     </task>
     <task id="LOCAL-00001" summary="登录功能模拟，还有最基础的用户查询">
       <created>1686214436432</created>
@@ -443,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687349285922</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="购物车列表">
+      <created>1687527256997</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1687527256997</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="查询菜单和删除菜单" />
     <MESSAGE value="查询角色权限，前端没有完成功能，凑活看看" />
     <MESSAGE value="开通区域列表" />
     <MESSAGE value="开通区域列表，上次忘了add了" />
@@ -486,19 +514,20 @@
     <MESSAGE value="商品详情页" />
     <MESSAGE value="添加商品到购物车" />
     <MESSAGE value="删除购物车" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除购物车" />
+    <MESSAGE value="购物车列表" />
+    <option name="LAST_COMMIT_MESSAGE" value="购物车列表" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.java</url>
-          <line>56</line>
+          <line>57</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.java</url>
-          <line>54</line>
+          <line>55</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -523,17 +552,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.java</url>
-          <line>83</line>
+          <line>84</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/service/impl/ActivityInfoServiceImpl.java</url>
-          <line>166</line>
+          <line>167</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/service-activity/src/main/java/com/atguigu/ssyx/activity/api/ActivityApiController.java</url>
-          <line>30</line>
+          <line>32</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
